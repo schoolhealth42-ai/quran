@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+<title>نور القرآن</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F6E27A"/><stop offset=".5" stop-color="#D4AF37"/><stop offset="1" stop-color="#9C7A1E"/>
+    </linearGradient>
+  </defs>
+  <symbol id="i-gear" viewBox="0 0 48 48">
+    <path fill="url(#gGold)" d="M27.6 3.5l1.2 5.1c1.5.5 2.9 1.1 4.2 1.9l4.5-2.7 5 5-2.7 4.5c.8 1.3 1.4 2.7 1.9 4.2l5.1 1.2v7.1l-5.1 1.2c-.5 1.5-1.1 2.9-1.9 4.2l2.7 4.5-5 5-4.5-2.7c-1.3.8-2.7 1.4-4.2 1.9l-1.2 5.1h-7.1l-1.2-5.1c-1.5-.5-2.9-1.1-4.2-1.9l-4.5 2.7-5-5 2.7-4.5c-.8-1.3-1.4-2.7-1.9-4.2l-5.1-1.2v-7.1l5.1-1.2c.5-1.5 1.1-2.9 1.9-4.2L5.5 12.8l5-5 4.5 2.7c1.3-.8 2.7-1.4 4.2-1.9l1.2-5.1z"/>
+    <circle cx="24" cy="24" r="10.5" fill="#0B3D2E"/>
+    <path fill="url(#gGold)" d="M24 16.2l2.3 3.9 4.4-1-1 4.4 3.9 2.3-3.9 2.3 1 4.4-4.4-1L24 35.4l-2.3-3.9-4.4 1 1-4.4-3.9-2.3 3.9-2.3-1-4.4 4.4 1z" transform="translate(0 -1.8)"/>
+    <circle cx="24" cy="24" r="3.2" fill="#0B3D2E"/>
+  </symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M12 6.5C9.5 4.8 6.5 4.5 3 5v13c3.5-.5 6.5-.2 9 1.5 2.5-1.7 5.5-2 9-1.5V5c-3.5-.5-6.5-.2-9 1.5zM12 6.5v13"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7"/></g></symbol>
+  <symbol id="i-scroll" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7"/><path d="M6 4a2 2 0 0 0-2 2v1h4V6a2 2 0 0 0-2-2zM8 7v11a2 2 0 1 1-4 0v-1"/><path d="M11 9h5M11 12.5h5M11 16h3"/></g></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path fill="currentColor" d="M16 6h2v12h-2zM14 12 5 18V6z" transform="rotate(180 12 12)"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path fill="currentColor" d="M16 6h2v12h-2zM14 12 5 18V6z"/></symbol>
+  <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3.2l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17.2 6.6 20.1l1-6.1-4.4-4.3 6.1-.9z"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></g></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></g></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></g></symbol>
+  <symbol id="i-share" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="18" cy="5.5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="18.5" r="2.5"/><path d="M8.2 10.8l7.6-4M8.2 13.2l7.6 4"/></g></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M6 3.5h12v17l-6-4-6 4z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-orn" viewBox="0 0 40 40"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M20 2l5.3 5.3H33v7.4l5 5.3-5 5.3v7.4h-7.7L20 38l-5.3-5.3H7v-7.4L2 20l5-5.3V7.3h7.7z"/><circle cx="20" cy="20" r="11.5" fill="none" stroke="currentColor" stroke-width="1"/></symbol>
+</svg>
+
+<header class="topbar">
+  <button class="icon-btn back" id="btnBack" aria-label="رجوع" hidden><svg><use href="#i-back"/></svg></button>
+  <div class="brand">
+    <span class="brand-mark"><svg viewBox="0 0 40 40"><use href="#i-orn"/></svg></span>
+    <div class="brand-text">
+      <h1 id="pageTitle">نور القرآن</h1>
+      <small id="pageSub">القرآن الكريم · الأربعون النووية</small>
+    </div>
+  </div>
+  <button class="gear-btn" id="btnSettings" aria-label="الإعدادات"><svg><use href="#i-gear"/></svg></button>
+</header>
+
+<main id="app">
+
+  <!-- الرئيسية -->
+  <section class="view active" id="v-home" data-title="نور القرآن" data-sub="القرآن الكريم · الأربعون النووية">
+    <div class="hero">
+      <div class="hero-pattern"></div>
+      <p class="hero-date" id="hijri"></p>
+      <p class="hero-verse">﴿ إِنَّ هَٰذَا ٱلْقُرْءَانَ يَهْدِى لِلَّتِى هِىَ أَقْوَمُ ﴾</p>
+      <p class="hero-ref">سورة الإسراء · ٩</p>
+    </div>
+
+    <div class="continue card" id="continueCard" hidden>
+      <div>
+        <small>متابعة القراءة</small>
+        <b id="continueText"></b>
+      </div>
+      <button class="btn gold" id="btnContinue">متابعة</button>
+    </div>
+
+    <div class="tiles">
+      <button class="tile" data-go="mushaf">
+        <span class="tile-ic"><svg><use href="#i-book"/></svg></span>
+        <b>المصحف المكتوب</b><small>رسم مصحف الملك فهد مع تظليل الآية</small>
+      </button>
+      <button class="tile" data-go="reciters">
+        <span class="tile-ic"><svg><use href="#i-mic"/></svg></span>
+        <b>أشهر القراء</b><small>تلاوات كاملة لأكثر من مئتي قارئ</small>
+      </button>
+      <button class="tile" data-go="nawawi">
+        <span class="tile-ic"><svg><use href="#i-scroll"/></svg></span>
+        <b>الأربعون النووية</b><small>مقروءة ومسموعة مع متابعة الحفظ</small>
+      </button>
+      <button class="tile" data-go="settings">
+        <span class="tile-ic gear-tile"><svg><use href="#i-gear"/></svg></span>
+        <b>الإعدادات</b><small>الخط، القارئ، المظهر، الصوت</small>
+      </button>
+    </div>
+
+    <div class="card progress-card">
+      <div class="row-between"><b>حفظ الأربعين النووية</b><span id="nawProgText">0 / 42</span></div>
+      <div class="bar"><i id="nawProgBar"></i></div>
+    </div>
+
+    <div class="card" id="bookmarksCard" hidden>
+      <b>العلامات المحفوظة</b>
+      <div id="bookmarksList" class="chips"></div>
+    </div>
+  </section>
+
+  <!-- فهرس السور -->
+  <section class="view" id="v-mushaf" data-title="المصحف الشريف" data-sub="برواية حفص عن عاصم">
+    <div class="search"><svg><use href="#i-search"/></svg><input id="surahSearch" placeholder="ابحث عن سورة أو رقمها…"></div>
+    <div class="seg" id="mushafSeg">
+      <button class="on" data-f="all">الكل</button><button data-f="مكية">مكية</button><button data-f="مدنية">مدنية</button>
+    </div>
+    <ul class="list" id="surahList"></ul>
+  </section>
+
+  <!-- القارئ (المصحف) -->
+  <section class="view" id="v-reader" data-title="" data-sub="">
+    <div class="reader-tools">
+      <button class="chip-btn" id="btnPickReciter"><svg><use href="#i-mic"/></svg><span id="readerReciter"></span></button>
+      <span class="reader-meta" id="readerMeta"></span>
+    </div>
+    <article class="mushaf-page" id="mushafPage"></article>
+    <div class="reader-nav">
+      <button class="btn ghost" id="btnPrevSurah">السورة السابقة</button>
+      <button class="btn ghost" id="btnNextSurah">السورة التالية</button>
+    </div>
+  </section>
+
+  <!-- القراء -->
+  <section class="view" id="v-reciters" data-title="أشهر القراء" data-sub="تلاوات كاملة بجودة عالية">
+    <div class="search"><svg><use href="#i-search"/></svg><input id="reciterSearch" placeholder="ابحث باسم القارئ…"></div>
+    <div class="seg" id="recSeg"><button class="on" data-f="famous">الأشهر</button><button data-f="fav">المفضلة</button><button data-f="all">كل القراء</button></div>
+    <div id="recStatus" class="status"></div>
+    <ul class="list" id="reciterList"></ul>
+  </section>
+
+  <!-- سور قارئ معين -->
+  <section class="view" id="v-reciter" data-title="" data-sub="">
+    <div class="chips" id="moshafChips"></div>
+    <ul class="list" id="recSurahList"></ul>
+  </section>
+
+  <!-- الأربعون النووية -->
+  <section class="view" id="v-nawawi" data-title="الأربعون النووية" data-sub="للإمام يحيى بن شرف النووي رحمه الله">
+    <div id="nawStatus" class="status"></div>
+    <ul class="list" id="hadithList"></ul>
+  </section>
+
+  <!-- حديث -->
+  <section class="view" id="v-hadith" data-title="" data-sub="">
+    <article class="hadith-card">
+      <div class="hadith-head"><span class="hadith-no" id="hNo"></span><h2 id="hTitle"></h2></div>
+      <div class="hadith-text" id="hText"></div>
+    </article>
+    <div class="hadith-actions">
+      <button class="act" id="hListen"><svg><use href="#i-speaker"/></svg><span>استماع</span></button>
+      <button class="act" id="hStop"><svg><use href="#i-stop"/></svg><span>إيقاف</span></button>
+      <button class="act" id="hMem"><svg><use href="#i-check"/></svg><span>حفظته</span></button>
+      <button class="act" id="hCopy"><svg><use href="#i-copy"/></svg><span>نسخ</span></button>
+      <button class="act" id="hShare"><svg><use href="#i-share"/></svg><span>مشاركة</span></button>
+    </div>
+    <div class="reader-nav">
+      <button class="btn ghost" id="hPrev">الحديث السابق</button>
+      <button class="btn ghost" id="hNext">الحديث التالي</button>
+    </div>
+  </section>
+
+  <!-- الإعدادات -->
+  <section class="view" id="v-settings" data-title="الإعدادات" data-sub="خصّص تجربتك">
+    <div class="set-group">
+      <h3>المظهر</h3>
+      <div class="set-row"><span>السمة</span>
+        <div class="swatches" id="themeSw">
+          <button data-v="light" style="--c:#FBF8F1" title="فاتح"></button>
+          <button data-v="sepia" style="--c:#F3E5C4" title="عاجي"></button>
+          <button data-v="green" style="--c:#0B3D2E" title="زمردي"></button>
+          <button data-v="dark" style="--c:#121417" title="داكن"></button>
+        </div>
+      </div>
+      <div class="set-row"><span>لون تظليل الآية</span>
+        <div class="swatches" id="hlSw">
+          <button data-v="gold" style="--c:#E9C75A"></button>
+          <button data-v="green" style="--c:#4FB286"></button>
+          <button data-v="blue" style="--c:#5B9BD5"></button>
+          <button data-v="rose" style="--c:#D98484"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <h3>المصحف</h3>
+      <div class="set-row"><span>خط المصحف</span>
+        <select id="sFont">
+          <option value="hafs">خط مجمع الملك فهد (حفص)</option>
+          <option value="amiri">خط أميري قرآن</option>
+        </select>
+      </div>
+      <div class="set-row"><span>طريقة العرض</span>
+        <select id="sLayout"><option value="flow">صفحة متصلة (كالمصحف)</option><option value="list">آية في كل سطر</option></select>
+      </div>
+      <div class="set-row col"><span>حجم خط القرآن <b id="sQSizeV"></b></span><input type="range" id="sQSize" min="20" max="48" step="1"></div>
+      <label class="set-row"><span>إظهار فواصل الصفحات والأجزاء</span><input type="checkbox" class="sw" id="sPages"></label>
+    </div>
+
+    <div class="set-group">
+      <h3>التلاوة</h3>
+      <div class="set-row"><span>القارئ الافتراضي</span><select id="sReciter"></select></div>
+      <div class="set-row"><span>تكرار كل آية</span>
+        <select id="sRepeat"><option value="1">مرة واحدة</option><option value="2">مرتين</option><option value="3">٣ مرات</option><option value="5">٥ مرات</option><option value="10">١٠ مرات</option></select>
+      </div>
+      <div class="set-row"><span>سرعة التلاوة</span>
+        <select id="sSpeed"><option value="0.75">0.75×</option><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select>
+      </div>
+      <label class="set-row"><span>تشغيل البسملة قبل السورة</span><input type="checkbox" class="sw" id="sBasmala"></label>
+      <label class="set-row"><span>التمرير التلقائي مع الآية</span><input type="checkbox" class="sw" id="sScroll"></label>
+      <label class="set-row"><span>الانتقال للسورة التالية تلقائيًا</span><input type="checkbox" class="sw" id="sAutoNext"></label>
+      <label class="set-row"><span>إبقاء الشاشة مضاءة أثناء القراءة</span><input type="checkbox" class="sw" id="sAwake"></label>
+    </div>
+
+    <div class="set-group">
+      <h3>الأحاديث</h3>
+      <div class="set-row col"><span>حجم خط الحديث <b id="sHSizeV"></b></span><input type="range" id="sHSize" min="16" max="34" step="1"></div>
+      <div class="set-row"><span>سرعة القراءة الصوتية</span>
+        <select id="sTtsRate"><option value="0.7">بطيئة</option><option value="0.85">متوسطة</option><option value="1">عادية</option></select>
+      </div>
+      <button class="set-row link" id="sTtsSettings"><span>إعدادات محرك النطق العربي</span><svg><use href="#i-back"/></svg></button>
+    </div>
+
+    <div class="set-group">
+      <h3>البيانات</h3>
+      <button class="set-row link" id="sClear"><span>مسح الملفات المؤقتة</span><svg><use href="#i-back"/></svg></button>
+      <button class="set-row link danger" id="sReset"><span>استعادة الإعدادات الافتراضية</span><svg><use href="#i-back"/></svg></button>
+    </div>
+
+    <div class="about">
+      <span class="brand-mark big"><svg viewBox="0 0 40 40"><use href="#i-orn"/></svg></span>
+      <b>نور القرآن · الإصدار 1.0</b>
+      <small>نص المصحف: رسم مجمع الملك فهد لطباعة المصحف الشريف · التلاوات: EveryAyah و MP3Quran · الأحاديث: الأربعون النووية</small>
+    </div>
+  </section>
+</main>
+
+<!-- مشغل المصحف (آية بآية) -->
+<div class="player" id="ayahPlayer" hidden>
+  <div class="player-info"><b id="apTitle"></b><small id="apSub"></small></div>
+  <div class="player-ctrls">
+    <button class="icon-btn" id="apRepeat" title="تكرار"><svg><use href="#i-repeat"/></svg><em id="apRepeatN"></em></button>
+    <button class="icon-btn" id="apPrev"><svg><use href="#i-prev"/></svg></button>
+    <button class="play-btn" id="apPlay"><svg><use href="#i-play"/></svg></button>
+    <button class="icon-btn" id="apNext"><svg><use href="#i-next"/></svg></button>
+    <button class="icon-btn" id="apStop"><svg><use href="#i-stop"/></svg></button>
+  </div>
+</div>
+
+<!-- مشغل التلاوات الكاملة -->
+<div class="player full" id="fullPlayer" hidden>
+  <div class="player-info"><b id="fpTitle"></b><small id="fpSub"></small></div>
+  <input type="range" id="fpSeek" min="0" max="1000" value="0">
+  <div class="fp-time"><span id="fpCur">0:00</span><span id="fpDur">0:00</span></div>
+  <div class="player-ctrls">
+    <button class="icon-btn" id="fpPrev"><svg><use href="#i-prev"/></svg></button>
+    <button class="play-btn" id="fpPlay"><svg><use href="#i-play"/></svg></button>
+    <button class="icon-btn" id="fpNext"><svg><use href="#i-next"/></svg></button>
+    <button class="icon-btn" id="fpClose"><svg><use href="#i-close"/></svg></button>
+  </div>
+</div>
+
+<nav class="tabbar" id="tabbar">
+  <button data-go="home" class="on"><svg><use href="#i-home"/></svg><span>الرئيسية</span></button>
+  <button data-go="mushaf"><svg><use href="#i-book"/></svg><span>المصحف</span></button>
+  <button data-go="reciters"><svg><use href="#i-mic"/></svg><span>القراء</span></button>
+  <button data-go="nawawi"><svg><use href="#i-scroll"/></svg><span>الأربعون</span></button>
+  <button data-go="settings" class="tab-gear"><svg><use href="#i-gear"/></svg><span>الإعدادات</span></button>
+</nav>
+
+<!-- ورقة الخيارات -->
+<div class="sheet-bg" id="sheetBg" hidden></div>
+<div class="sheet" id="sheet" hidden><div class="sheet-handle"></div><div id="sheetBody"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
